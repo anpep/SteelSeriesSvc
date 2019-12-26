@@ -12,7 +12,7 @@ real time.
 It's actually a Windows program that runs (preferably) as a service.
 
 ## Quick start
-1. [Download this](https://tildegit.org/angel/SteelSeriesSvc) and extract **in any folder not directly writable
+1. [Download this](https://github.com/my-nick-is-taken/SteelSeriesSvc) and extract **in any folder not directly writable
 by you(e.g. `C:\Program Files`, `C:\Windows`, etc.)**.
 2. Open an elevated command prompt and run `SteelSeriesSvc install`.
 3. Start the service on `services.msc` or run `net start SteelSeriesSvc`. Alternatively, you can just log out
@@ -35,7 +35,7 @@ By default, the service runs as the `.\LocalSystem` account. This is probably ok
 paranoid there's a way you can work around that. More on that just right below.
 
 ## Usage and Installation
-[Grab the latest release](https://tildegit.org/angel/SteelSeriesSvc) and extract it to somewhere kinda safe.
+[Grab the latest release](https://github.com/my-nick-is-taken/SteelSeriesSvc/releases) and extract it to somewhere kinda safe.
 Like, you don't want the executable to be in a user writable location, because it will be executed as `SYSTEM`
 by default. Not good.
 
@@ -80,7 +80,7 @@ Voilà! No more integration. You can now safely remove the .exe file, too.
 ## Building
 In a Native Tools Command Prompt, Visual Studio Command Prompt or equivalent:
 ```
-> git clone https://tildegit.org/angel/SteelSeriesSvc
+> git clone https://github.com/my-nick-is-taken/SteelSeriesSvc
 > cd SteelSeriesSvc
 > MSBuild /p:Configuration=Release
 ```
@@ -109,3 +109,4 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 ```
+
