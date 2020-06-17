@@ -169,12 +169,9 @@ CoreSyncColorization(void)
   DWORD dwType = REG_DWORD;
   DWORD dwColorization = 0;
   DWORD cbColorization = sizeof(dwColorization);
-  if (RegQueryValueExW(g_hkColorization,
-                       L"ColorizationColor",
-                       NULL,
-                       &dwType,
-                       (LPBYTE) &dwColorization,
-                       &cbColorization) == ERROR_SUCCESS)
+
+  if (RegQueryValueExW(g_hkColorization, L"KeyboardColorizationColor", NULL, &dwType, (LPBYTE)&dwColorization, &cbColorization) == ERROR_SUCCESS
+      || RegQueryValueExW(g_hkColorization, L"ColorizationColor", NULL, &dwType, (LPBYTE)&dwColorization, &cbColorization) == ERROR_SUCCESS)
   {
     wprintf(L"syncing colorization\n");
 
